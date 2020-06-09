@@ -1,0 +1,194 @@
+body {
+  margin-top: 30px;
+}
+.welcome {
+  margin-top: auto;
+  padding: 15px;
+  -webkit-text-stroke: black 2.5px;
+  font-weight: 900;
+  font-size: xx-large;
+}
+
+.resetBtn {
+  -webkit-text-stroke: black 1px;
+  font-weight: 900;
+}
+
+.logout {
+  margin: 5px;
+  position: absolute;
+  top: 8px;
+  right: 2px;
+  -webkit-text-stroke: black 1px;
+  font-weight: 900;
+}
+nav {
+  /* background-image: url(../images/open-social-trivia.png); */
+  background-size: 640px;
+  background-position-y: -210px;
+  background-repeat: no-repeat;
+  background-position-x: center;
+}
+#film {
+  background-image: url(../images/film.jpg);
+  background-size: 75px;
+  background-position-y: -7px;
+  -webkit-text-stroke: black 1px;
+  font-weight: 900;
+}
+#tv {
+  background-image: url(../images/tv.jpg);
+  background-position-y: 66px;
+  background-size: 170px;
+  -webkit-text-stroke: black 1px;
+  font-weight: 900;
+}
+#sports {
+  background-image: url(../images/sports.jpg);
+  background-size: 100px;
+  background-position-y: -20px;
+  -webkit-text-stroke: black 1px;
+  font-weight: 900;
+}
+#compSci {
+  background-image: url(../images/computer\sci.jpg);
+  background-size: 180px;
+  background-position-y: -65px;
+  -webkit-text-stroke: black 1px;
+  font-weight: 900;
+}
+#userQ {
+  background-image: url(../images/randomuser.jpg);
+  background-size: 240px;
+  background-position-y: center;
+  -webkit-text-stroke: black 1px;
+  font-weight: 900;
+}
+
+#home {
+  margin: 15px;
+}
+
+.backgroundImage {
+  background-image: url("../images/trivia-background.jpg");
+  background-size: cover;
+  background-repeat: repeat-y;
+}
+
+#displayAnswer {
+  height: 15px;
+}
+
+.chat {
+  padding: 30px;
+  max-height: 300px;
+  overflow-y: scroll;
+}
+
+#onlineUsers {
+  max-height: 300px;
+  overflow-y: scroll;
+  overflow: hidden;
+  box-shadow: 0 0 20px 8px rgba(52, 66, 3, 0.87);
+}
+
+.chat-messages .message {
+  padding: 10px;
+  margin-bottom: 15px;
+  background-color: var(--light-color);
+  border-radius: 5px;
+}
+
+.chat-messages .message .meta {
+  font-size: 15px;
+  font-weight: bold;
+  color: var(--dark-color-b);
+  opacity: 0.7;
+  margin-bottom: 7px;
+}
+
+.chat-messages .message .meta span {
+  color: #777;
+}
+
+.meta {
+  font-size: 14px;
+  color: #d81b60;
+}
+
+.logo {
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+}
+h4 {
+  border: 0;
+  height: 1px;
+  margin: 0rem 0 0.912rem 0 !important;
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 248, 248, 0.87),
+    rgba(244, 244, 244, 0.75),
+    rgba(0, 0, 0, 0)
+  );
+}
+
+#staticCard {
+  height: 125px;
+  max-height: 250px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 90px;
+  box-shadow: 0 0 20px 8px #aa2b00f7;
+  padding: 45px;
+  font-size: medium;
+}
+
+#scoreCard {
+  box-shadow: 0 0 20px 8px rgba(52, 66, 3, 0.87);
+}
+
+#chatWindow {
+  box-shadow: 0 0 15px 6px #757575;
+}
+
+.loading:after {
+  content: " .";
+  animation: dots 1s steps(5, end) infinite;
+}
+
+@keyframes dots {
+  0%,
+  20% {
+    color: rgba(0, 0, 0, 0);
+    text-shadow: 0.25em 0 0 rgba(0, 0, 0, 0), 0.5em 0 0 rgba(0, 0, 0, 0);
+  }
+  40% {
+    color: white;
+    text-shadow: 0.25em 0 0 rgba(0, 0, 0, 0), 0.5em 0 0 rgba(0, 0, 0, 0);
+  }
+  60% {
+    text-shadow: 0.25em 0 0 white, 0.5em 0 0 rgba(0, 0, 0, 0);
+  }
+  80%,
+  100% {
+    text-shadow: 0.25em 0 0 white, 0.5em 0 0 white;
+  }
+}
+
+.mainQ {
+  height: 125px;
+  max-height: 250px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 70px;
+  box-shadow: 0 0 20px 8px #aa2b00f7;
+  padding: 45px;
+  font-size: medium;
+}
+
+.home {
+  display: inline-block;
+}

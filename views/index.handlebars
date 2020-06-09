@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Open Social Trivia</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+</head>
+<div class="backgroundImage">
+
+  <nav class="uk-navbar-container green darken-3" uk-navbar>
+    <div class="uk-navbar-left">
+      <h5 class="welcome">Welcome {{name}}</h5>
+      <span id="user-id" style="display: none;">{{email}}</span>
+      <form action="/logout?_method=DELETE" method="POST">
+        <button type="submit" class="logout btn red right">Log Out</button>
+      </form>
+      <form action=" /questions">
+              <button action=" /questions" type="submit"  class="logout btn red right">Submit A Trivia Question</button>
+      </form>
+
+      <ul class="uk-navbar-nav">
+      </ul>
+    </div>
+  </nav>
+
+
+  <div id="home">
+    <a class="waves-effect waves-light btn red darken-3" id="film">Film</a>
+    <a class="waves-effect waves-light btn red darken-3" id="tv">Television</a>
+    <a class="waves-effect waves-light btn red darken-3" id="sports">Sports</a>
+    <a class="waves-effect waves-light btn red darken-3" id="compSci">Computer Science</a>
+    <a class="waves-effect waves-light btn red darken-3" id="userQ">Random User Questions</a>
+    <a class="waves-effect waves-light btn red darken-3" id="triviaQ">Socket Trivia</a>
+
+    ​
+    <p class="timer" style="float: right; padding-right: 25px;"></p>
+
+
+
+    {{!-- <form>
+    <div class="input-field">
+      <div class="row">
+        <div class="input-field col s6">
+          <input id="answerInput" type="search" required>
+          <button class="answerSpan" style="visibility:hidden;" id="submitBtn">Submit</button>
+          <label>Enter Answer</label>
+          
+        </div>
+      </div>
+    </div>
+  </form>  --}}
+
+
+
+
+    <div class="row">
+      <div id="displayTrivia">
+        <br>
+        <div class="col s7 m7 l7 card white-text pink accent-4 card-content" id="staticCard"
+          style="padding: 15px; margin-left:11px;">
+          <span class="loading" id="triviaDisplaySpan">Getting Ready</span>
+        </div>
+
+      </div>
+      <div class="container col s3 m3" id="displayAnswer">
+
+      </div>
+    </div>
+    <div class="row">
+
+      <div class="col s3 m3">
+        <div class="card green darken-3" id="scoreCard">
+          <div class="card-content white-text">
+            <span class="card-title ">Score Card</span>
+            <h4 class="card-title"></h4>
+
+            <p class="score">
+              <b>Farish</b> Score: 100<br>
+              <b>Curtis</b> Score: 55<br>
+              <b>Austin</b> Score: 52<br>
+              <b>Polly</b> Score: 12<br>
+
+
+
+            </p>
+          </div>
+
+        </div>
+        <div class="row">
+          <div class="col s12 m12">
+            <div class="card green darken-3" id="onlineUsers">
+              <div class="card-content white-text">
+                <span class="card-title">Online Users</span>
+                <h4 class="card-title"></h4>
+                <ul class="list-group" id="userList"></ul>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col s9 m9">
+        <div class="card blue-grey darken-1" id="chatWindow">
+          <div class="card-content white-text">
+            <span class="card-title">Chat</span>
+            <h4 class="card-title"></h4>
+
+            <form id="messageForm">
+              <div class="form-group">
+
+                <div class="chat" id="chat"></div>
+
+                <label>Enter Message</label>
+                <textarea class="form-control" id="message"></textarea>
+                <br />
+                <input type="submit" class="btn pink accent-4" id="chatSubmit" value="Send Message">
+
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+  <script src="/jquery/dist/jquery.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+
+
+
+  </body>
+
+</html>
